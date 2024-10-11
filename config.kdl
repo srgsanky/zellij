@@ -328,6 +328,8 @@ scroll_buffer_size 1000000
 // copy_command "xclip -selection clipboard" // x11
 // copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
+// NOTE: This is used only for mouse based selection. The tmux copy mode equivalent in zellij is to
+//       use nvim to edit the scrollback buffer (C-s e)
 copy_command "nc localhost 19999"
 
 // Choose the destination for copied text
