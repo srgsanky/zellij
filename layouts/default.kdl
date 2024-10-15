@@ -1,0 +1,46 @@
+// See https://github.com/dj95/zjstatus/wiki/3-%E2%80%90-Configuration
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="zjstatus" {
+                format_left "{tabs}"
+                format_right  "{mode} #[fg=#89B4FA,bold]{session} {datetime}"
+                format_space  ""
+
+                border_enabled  "true"
+                border_char     "─"
+                border_format   "#[fg=#6C7086]{char}"
+                border_position "top"
+
+                // hide_frame_for_single_pane "true"
+
+                mode_normal        "#[bg=blue,fg=#333333] {name} "
+                mode_locked        "#[bg=yellow,fg=#333333] {name} "
+                mode_resize        "#[bg=magenta,fg=#333333] {name} "
+                mode_pane          "#[bg=orange,fg=#333333] {name} "
+                mode_tab           "#[bg=white,fg=#333333] {name} "
+                mode_scroll        "#[bg=#89B4FA,fg=#333333] {name} "
+                mode_enter_search  "#[bg=#89B4FA,fg=#333333] {name} "
+                mode_search        "#[bg=#89B4FA,fg=#333333] {name} "
+                mode_rename_tab    "#[bg=#89B4FA,fg=#333333] {name} "
+                mode_rename_pane   "#[bg=#89B4FA,fg=#333333] {name} "
+                mode_session       "#[bg=#89B4FA,fg=#333333] {name} "
+                mode_move          "#[bg=#89B4FA,fg=#333333] {name} "
+                mode_prompt        "#[bg=#89B4FA,fg=#333333] {name} "
+                mode_tmux          "#[bg=#ffc387,fg=#333333] {name} "
+
+                mode_default_to_mode "normal"
+
+                tab_normal   "#[fg=#D3D3D3,bg=#200c08] {index} {name} "
+                tab_active   "#[fg=#333333,bg=#FFA500,bold] {index} {name} "
+                tab_separator           "#[fg=#FFFFFF,bg=#181825] | "
+
+                datetime        "#[fg=#FFFFFF,bold] {format} "
+                datetime_format "%A, %d %b %Y %H:%M"
+                datetime_format "%Y-%m-%d %H:%M PST"
+                datetime_timezone "America/Los_Angeles"
+            }
+        }
+    }
+}
