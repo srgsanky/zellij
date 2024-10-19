@@ -383,3 +383,13 @@ scrollback_editor "nvim"
 // Default: false
 //
 // disable_session_metadata true
+
+env {
+    RUST_BACKTRACE 1
+}
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
