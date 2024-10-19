@@ -7,7 +7,11 @@ layout {
                 // The following works only in Linux. Does not work in Mac
                 // command_cpu_load_command "cat /proc/loadavg | awk '{print $1}'"
                 // The following works in both Mac and Linux
-                command_cpu_load_command "bash -c \"uptime  | awk -F ',' '{print $4}' | awk '{print $3}'\""
+                // This was not working immediately after a restart in Linux
+                // command_cpu_load_command "bash -c \"uptime  | awk -F ',' '{print $4}' | awk '{print $3}'\""
+                // Linux has a comma after the num, so gsub is used to remove it. Mac does not use comma.
+                command_cpu_load_command  "bash -c \"uptime  | gawk '{ gsub(/,/, //, $(NF-2)); print $(NF-2) }'\""
+
                 command_cpu_load_format   "{stdout}"
                 command_cpu_load_interval "5" // In seconds
 
