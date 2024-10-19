@@ -3,6 +3,9 @@ keybinds {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
+
+        // Clear screen
+        bind "Ctrl l" { Clear; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
