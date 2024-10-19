@@ -4,8 +4,15 @@ layout {
         children
         pane size=1 borderless=true {
             plugin location="zjstatus" {
+                // The following works only in Linux. Does not work in Mac
+                // command_cpu_load_command "cat /proc/loadavg | awk '{print $1}'"
+                // The following works in both Mac and Linux
+                command_cpu_load_command "bash -c \"uptime  | awk -F ',' '{print $4}' | awk '{print $3}'\""
+                command_cpu_load_format   "{stdout}"
+                command_cpu_load_interval "5" // In seconds
+
                 format_left "{tabs}"
-                format_right  "{mode} #[fg=#89B4FA,bold]{session} {datetime}"
+                format_right  "{mode} #[fg=#89B4FA,bold]{session} | #[bg=orange,bold]CPU load: {command_cpu_load} | {datetime}"
                 format_space  ""
 
                 border_enabled  "true"
