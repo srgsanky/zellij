@@ -12,7 +12,8 @@ layout {
                 command_cpu_load_interval "5" // In seconds
 
                 format_left "{tabs}"
-                format_right  "{mode} #[fg=#89B4FA,bold]{session} | #[bg=orange,bold]CPU load: {command_cpu_load} | {datetime}"
+                format_center "{mode}"
+                format_right  "#[bg=#FFA500,fg=#333333,bold]CPU load: {command_cpu_load} #[] | {session} | {datetime}"
                 format_space  ""
 
                 border_enabled  "true"
@@ -22,10 +23,10 @@ layout {
 
                 // hide_frame_for_single_pane "true"
 
-                mode_normal        "#[bg=blue,fg=#333333] {name} "
+                mode_normal        "#[bg=green,fg=#333333]                    {name}                    "
                 mode_locked        "#[bg=yellow,fg=#333333] {name} "
                 mode_resize        "#[bg=magenta,fg=#333333] {name} "
-                mode_pane          "#[bg=orange,fg=#333333] {name} "
+                mode_pane          "#[bg=blue,fg=#333333] {name} "
                 mode_tab           "#[bg=white,fg=#333333] {name} "
                 mode_scroll        "#[bg=#89B4FA,fg=#333333] {name} "
                 mode_enter_search  "#[bg=#89B4FA,fg=#333333] {name} "
