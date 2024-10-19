@@ -24,7 +24,8 @@ layout {
                 // hide_frame_for_single_pane "true"
 
                 mode_normal        "#[bg=green,fg=#333333]                    {name}                    "
-                mode_locked        "#[bg=yellow,fg=#333333]                    {name}                    "
+                // lime green
+                mode_locked        "#[bg=#89f336,fg=#333333]                    {name}                    "
                 mode_resize        "#[bg=magenta,fg=#333333] {name} "
                 mode_pane          "#[bg=blue,fg=#333333] {name} "
                 mode_tab           "#[bg=white,fg=#333333] {name} "
