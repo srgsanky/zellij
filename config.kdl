@@ -151,7 +151,10 @@ keybinds {
     }
     shared_except "locked" {
         bind "Ctrl g" { SwitchToMode "Locked"; }
-        bind "Ctrl q" { Quit; }
+
+        // Don't allow quitting a session abruptly. Only quit when all existing tabs and panes are
+        // closed. I tend to accidently quit a lot.
+        // bind "Ctrl q" { Quit; }
 
         // I don't want any Alt based bindings
 
