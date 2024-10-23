@@ -27,21 +27,23 @@ layout {
 
                 // hide_frame_for_single_pane "true"
 
-                mode_normal        "#[bg=green,fg=#333333]                    {name}                    "
+                mode_normal        "#[bg=yellow,fg=#333333]                    {name}                    "
                 // lime green
                 mode_locked        "#[bg=#89f336,fg=#333333]                    {name}                    "
-                mode_resize        "#[bg=magenta,fg=#333333] {name} "
-                mode_pane          "#[bg=blue,fg=#333333] {name} "
-                mode_tab           "#[bg=white,fg=#333333] {name} "
-                mode_scroll        "#[bg=#89B4FA,fg=#333333] {name} "
-                mode_enter_search  "#[bg=#89B4FA,fg=#333333] {name} "
-                mode_search        "#[bg=#89B4FA,fg=#333333] {name} "
-                mode_rename_tab    "#[bg=#89B4FA,fg=#333333] {name} "
-                mode_rename_pane   "#[bg=#89B4FA,fg=#333333] {name} "
-                mode_session       "#[bg=#89B4FA,fg=#333333] {name} "
-                mode_move          "#[bg=#89B4FA,fg=#333333] {name} "
-                mode_prompt        "#[bg=#89B4FA,fg=#333333] {name} "
-                mode_tmux          "#[bg=#ffc387,fg=#333333] {name} "
+
+                // Make every mode other than normal/locked to be red.
+                mode_resize        "#[bg=red,fg=#333333] {name} "
+                mode_pane          "#[bg=red,fg=#333333] {name} "
+                mode_tab           "#[bg=red,fg=#333333] {name} "
+                mode_scroll        "#[bg=red,fg=#333333] {name} "
+                mode_enter_search  "#[bg=red,fg=#333333] {name} "
+                mode_search        "#[bg=red,fg=#333333] {name} "
+                mode_rename_tab    "#[bg=red,fg=#333333] {name} "
+                mode_rename_pane   "#[bg=red,fg=#333333] {name} "
+                mode_session       "#[bg=red,fg=#333333] {name} "
+                mode_move          "#[bg=red,fg=#333333] {name} "
+                mode_prompt        "#[bg=red,fg=#333333] {name} "
+                mode_tmux          "#[bg=red,fg=#333333] {name} "
 
                 mode_default_to_mode "normal"
 
