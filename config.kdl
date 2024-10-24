@@ -216,7 +216,7 @@ plugins {
     filepicker location="zellij:strider" {
         cwd "/"
     }
-    zjstatus location="file:///Users/sanka/.zellij/plugins/zjstatus/target/wasm32-wasip1/release/zjstatus.wasm"
+    zjstatus location="file:~/.zellij/plugins/zjstatus/target/wasm32-wasip1/release/zjstatus.wasm"
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
