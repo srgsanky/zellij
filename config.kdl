@@ -388,7 +388,7 @@ scrollback_editor "nvim"
 // disable_session_metadata true
 
 env {
-    RUST_BACKTRACE full
+    RUST_BACKTRACE "full"
 }
 
 ui {
